@@ -1,0 +1,75 @@
+﻿<Window x:Class="GameOfLife.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GameOfLife"
+        mc:Ignorable="d"
+        Title="GameOfLife" 
+        Height="450" 
+        Width="800"       
+        SizeChanged="Window_SizeChanged"       
+    Loaded="Window_Loaded">
+    <Grid Background="SteelBlue" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="0" Name="Plansza" Background="black"   MouseMove="OnMouseMove"  MouseLeftButtonDown="Canvas_MouseLeftButtonDown"/>
+        <Grid Grid.Column="1" Margin="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="40*" />
+                <RowDefinition Height="265*" />
+                <RowDefinition Height="40*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"  />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Viewbox Stretch="Uniform" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Left"  >
+                <Label  Content="GridSize:" />
+            </Viewbox>
+            <Viewbox Stretch="Uniform" Grid.Row="1" Grid.Column="0"  HorizontalAlignment="Left"  >
+                <Label  Content="Rules:"/>
+            </Viewbox>
+            <Viewbox Stretch="Uniform" Grid.Row="2" Grid.Column="0"  HorizontalAlignment="Left"  >
+                <Label  Content="Max Cycle:"/>
+            </Viewbox>
+            <Viewbox Stretch="Uniform" Grid.Row="3" Grid.Column="0"  HorizontalAlignment="Left"  >
+                <Label  Content="Cycle delay:"/>
+            </Viewbox>
+            <Viewbox Stretch="Uniform" Grid.Row="4" Grid.Column="0"  HorizontalAlignment="Left"  >
+                <Label  Content="Curent Cycle:"/>
+            </Viewbox>
+            <Viewbox Stretch="Uniform" Grid.Row="5" Grid.Column="0"  HorizontalAlignment="Left" Width="0">
+            </Viewbox>   
+
+            <Viewbox Stretch="Uniform" Grid.Column="1" Grid.Row="0"  >
+                <TextBox Name="GridSize"  MinWidth="100"   Padding="2" TextAlignment="Right"  Text="20" />             
+            </Viewbox>
+            <Viewbox Stretch="Uniform"  Grid.Column="1" Grid.Row="1" >
+                <TextBox Name="Rules"  MinWidth="100"  Padding="2" TextAlignment="Right"  Text="23/3" />       
+            </Viewbox>
+            <Viewbox Stretch="Uniform"  Grid.Column="1" Grid.Row="2" >
+                <TextBox Name="maxCycle"  MinWidth="100"  Padding="2"  TextAlignment="Right" Text="999999" />       
+            </Viewbox>
+            <Viewbox Stretch="Uniform"  Grid.Column="1" Grid.Row="3" >
+                <TextBox Name="cycleDelay"  MinWidth="100"  Padding="2" TextAlignment="Right" Text="100"/>   
+            </Viewbox>
+            <Viewbox Stretch="Uniform"  Grid.Column="1" Grid.Row="4" >
+                <TextBox Name="CycleAmount"  MinWidth="100"  Padding="2" IsReadOnly="True" Text="0" TextAlignment="Right"/>
+            </Viewbox>    
+            <Viewbox Stretch="Fill"  Grid.Column="0" Grid.Row="6" HorizontalAlignment="Center" MinWidth="50" Margin="5"  >
+                <Button Name="resetBtn" MinWidth="80"  Content="Reset" Click="Reset_Click" />
+            </Viewbox>
+            <Viewbox Stretch="Fill"  Grid.Column="1" Grid.Row="6" HorizontalAlignment="Center" MinWidth="50" Margin="5"  >
+                <Button Name="startBtn" MinWidth="80"  Content="Create" Click="Start_Click" />
+            </Viewbox>
+        </Grid>
+    </Grid>
+</Window>
+    

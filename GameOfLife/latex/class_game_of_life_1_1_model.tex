@@ -1,0 +1,128 @@
+\hypertarget{class_game_of_life_1_1_model}{}\section{Game\+Of\+Life.\+Model Class Reference}
+\label{class_game_of_life_1_1_model}\index{GameOfLife.Model@{GameOfLife.Model}}
+
+
+Klasa \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}}  
+
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_game_of_life_1_1_model_a4f6448745349c6f9d1f328a67e387570}{Model}} (int grid\+Size, string live, string dead, Canvas board)
+\begin{DoxyCompactList}\small\item\em Konstruktor klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_of_life_1_1_model_af96487f644682e8fd22a29a0670b874e}{init\+Cells}} (\mbox{\hyperlink{class_game_of_life_1_1_cell}{Cell}}\mbox{[},\mbox{]} tab)
+\begin{DoxyCompactList}\small\item\em Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} tworzaca komorki w tablicy \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_of_life_1_1_model_a1f60c15d9edf8f615f5ea063cf9c6495}{clear\+Grid}} (\mbox{\hyperlink{class_game_of_life_1_1_cell}{Cell}}\mbox{[},\mbox{]} tab)
+\begin{DoxyCompactList}\small\item\em Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} ustawia wszystkie komorki na martwe \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_of_life_1_1_model_adcbc7e10087aa7beeebd38c874c48d1f}{next\+Generation}} ()
+\begin{DoxyCompactList}\small\item\em Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} generujaca nastepne pokolenie komorek \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_game_of_life_1_1_model_afded2a6d8bc86d345362e0c3d422e584}{Paint\+Grid}} ()
+\begin{DoxyCompactList}\small\item\em Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} odpowiedzialna za dodanie komorek do canvas \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_of_life_1_1_model_a304757756aa41720a21a621ccfabfda3}\label{class_game_of_life_1_1_model_a304757756aa41720a21a621ccfabfda3}} 
+string {\bfseries live\+Rule}
+\item 
+\mbox{\Hypertarget{class_game_of_life_1_1_model_a18b321b1f480cc507a8f7af13c43cf40}\label{class_game_of_life_1_1_model_a18b321b1f480cc507a8f7af13c43cf40}} 
+string {\bfseries dead\+Rule}
+\item 
+\mbox{\Hypertarget{class_game_of_life_1_1_model_a2e8279a1b09b8d952736313501b4c133}\label{class_game_of_life_1_1_model_a2e8279a1b09b8d952736313501b4c133}} 
+Linear\+Gradient\+Brush {\bfseries five\+Color\+L\+GB}
+\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_game_of_life_1_1_model_aedb19d68a95ecbf78f7f58950c911598}\label{class_game_of_life_1_1_model_aedb19d68a95ecbf78f7f58950c911598}} 
+\mbox{\hyperlink{class_game_of_life_1_1_cell}{Cell}} \mbox{[},\mbox{]} {\bfseries cells}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_game_of_life_1_1_model_abd08d82762b8e603a66245b95591911a}\label{class_game_of_life_1_1_model_abd08d82762b8e603a66245b95591911a}} 
+\mbox{\hyperlink{class_game_of_life_1_1_cell}{Cell}} \mbox{[},\mbox{]} {\bfseries cells\+Next\+Gen}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Klasa \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_game_of_life_1_1_model_a4f6448745349c6f9d1f328a67e387570}\label{class_game_of_life_1_1_model_a4f6448745349c6f9d1f328a67e387570}} 
+\index{GameOfLife.Model@{GameOfLife.Model}!Model@{Model}}
+\index{Model@{Model}!GameOfLife.Model@{GameOfLife.Model}}
+\subsubsection{\texorpdfstring{Model()}{Model()}}
+{\footnotesize\ttfamily Game\+Of\+Life.\+Model.\+Model (\begin{DoxyParamCaption}\item[{int}]{grid\+Size,  }\item[{string}]{live,  }\item[{string}]{dead,  }\item[{Canvas}]{board }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} 
+
+
+\begin{DoxyParams}{Parameters}
+{\em grid\+Size} & Rozmiar siatki planszy\\
+\hline
+{\em live} & liczba komórek w sąsiedztwie, dla których żywe komórki przeżywają\\
+\hline
+{\em dead} & liczba komórek w sąsiedztwie, dla których martwe komórki ożywają\\
+\hline
+{\em board} & Obiekt canvas\\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_game_of_life_1_1_model_a1f60c15d9edf8f615f5ea063cf9c6495}\label{class_game_of_life_1_1_model_a1f60c15d9edf8f615f5ea063cf9c6495}} 
+\index{GameOfLife.Model@{GameOfLife.Model}!clearGrid@{clearGrid}}
+\index{clearGrid@{clearGrid}!GameOfLife.Model@{GameOfLife.Model}}
+\subsubsection{\texorpdfstring{clearGrid()}{clearGrid()}}
+{\footnotesize\ttfamily void Game\+Of\+Life.\+Model.\+clear\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_of_life_1_1_cell}{Cell}}}]{tab\mbox{[},\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} ustawia wszystkie komorki na martwe 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Tablica\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_of_life_1_1_model_af96487f644682e8fd22a29a0670b874e}\label{class_game_of_life_1_1_model_af96487f644682e8fd22a29a0670b874e}} 
+\index{GameOfLife.Model@{GameOfLife.Model}!initCells@{initCells}}
+\index{initCells@{initCells}!GameOfLife.Model@{GameOfLife.Model}}
+\subsubsection{\texorpdfstring{initCells()}{initCells()}}
+{\footnotesize\ttfamily void Game\+Of\+Life.\+Model.\+init\+Cells (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game_of_life_1_1_cell}{Cell}}}]{tab\mbox{[},\mbox{]} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} tworzaca komorki w tablicy 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tab} & Pusta tablica\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_game_of_life_1_1_model_adcbc7e10087aa7beeebd38c874c48d1f}\label{class_game_of_life_1_1_model_adcbc7e10087aa7beeebd38c874c48d1f}} 
+\index{GameOfLife.Model@{GameOfLife.Model}!nextGeneration@{nextGeneration}}
+\index{nextGeneration@{nextGeneration}!GameOfLife.Model@{GameOfLife.Model}}
+\subsubsection{\texorpdfstring{nextGeneration()}{nextGeneration()}}
+{\footnotesize\ttfamily void Game\+Of\+Life.\+Model.\+next\+Generation (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} generujaca nastepne pokolenie komorek 
+
+\mbox{\Hypertarget{class_game_of_life_1_1_model_afded2a6d8bc86d345362e0c3d422e584}\label{class_game_of_life_1_1_model_afded2a6d8bc86d345362e0c3d422e584}} 
+\index{GameOfLife.Model@{GameOfLife.Model}!PaintGrid@{PaintGrid}}
+\index{PaintGrid@{PaintGrid}!GameOfLife.Model@{GameOfLife.Model}}
+\subsubsection{\texorpdfstring{PaintGrid()}{PaintGrid()}}
+{\footnotesize\ttfamily void Game\+Of\+Life.\+Model.\+Paint\+Grid (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Metoda klasy \mbox{\hyperlink{class_game_of_life_1_1_model}{Model}} odpowiedzialna za dodanie komorek do canvas 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Model.\+cs\end{DoxyCompactItemize}

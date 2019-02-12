@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>GameOfLifeX</name>
+    </assembly>
+    <members>
+        <member name="T:GameOfLife.App">
+            <summary>
+            Logika interakcji dla klasy App.xaml
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="M:GameOfLife.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:GameOfLife.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:GameOfLife.Model">
+            <summary>
+             Klasa Model
+            </summary>
+        </member>
+        <member name="M:GameOfLife.Model.#ctor(System.Int32,System.String,System.String,System.Windows.Controls.Canvas)">
+            <summary>
+             Konstruktor klasy Model    
+            </summary>
+            <param name="gridSize">Rozmiar siatki planszy</param>
+            <param name="live">liczba komórek w sąsiedztwie, dla których żywe komórki przeżywają</param>
+            <param name="dead">liczba komórek w sąsiedztwie, dla których martwe komórki ożywają</param>
+            <param name="board">Obiekt canvas</param>
+        </member>
+        <member name="M:GameOfLife.Model.initCells(GameOfLife.Cell[0:,0:])">
+            <summary>
+             Metoda klasy Model tworzaca komorki w tablicy    
+            </summary>
+            <param name="tab">Pusta tablica</param>
+        </member>
+        <member name="M:GameOfLife.Model.clearGrid(GameOfLife.Cell[0:,0:])">
+            <summary>
+             Metoda klasy Model ustawia wszystkie komorki na martwe    
+            </summary>
+            <param name="tab">Tablica</param>
+        </member>
+        <member name="M:GameOfLife.Model.nextGeneration">
+            <summary>
+             Metoda klasy Model generujaca nastepne pokolenie komorek   
+            </summary>      
+        </member>
+        <member name="M:GameOfLife.Model.PaintGrid">
+            <summary>
+             Metoda klasy Model  odpowiedzialna za dodanie komorek do canvas  
+            </summary>  
+        </member>
+        <member name="T:GameOfLife.Cell">
+            <summary>
+             Klasa Cell
+            </summary>
+        </member>
+        <member name="M:GameOfLife.Cell.#ctor(System.Boolean)">
+            <summary>
+             Konstruktor klasy Cell
+            </summary>
+        </member>
+        <member name="T:GameOfLife.ViewModel">
+            <summary>
+             Klasa ViweModel
+            </summary>
+        </member>
+        <member name="M:GameOfLife.ViewModel.#ctor(System.Int32,System.String,System.String,System.Windows.Controls.Canvas)">
+            <summary>
+             Konstruktor klasy ViewModel    
+            </summary>
+            <param name="gridSize">Rozmiar siatki planszy</param>
+            <param name="liveRules">liczba komórek w sąsiedztwie, dla których żywe komórki przeżywają</param>
+            <param name="deadRules">liczba komórek w sąsiedztwie, dla których martwe komórki ożywają</param>
+            <param name="board">Obiekt canvas</param>
+        </member>
+        <member name="M:GameOfLife.ViewModel.Next">
+            <summary>
+             Metoda asynchroniczna klasy ViewModel odpowiedzialna za nastepna generacje komorek    
+            </summary>    
+        </member>
+        <member name="M:GameOfLife.ViewModel.mouseClick">
+            <summary>
+             Metoda klasy ViewModel obslugujaca kliknienie myszka   
+            </summary>  
+        </member>
+        <member name="M:GameOfLife.ViewModel.mouseMoveLeft">
+            <summary>
+             Metoda klasy ViewModel obslugujaca przytrzymanie lewego klawisza myszy  
+            </summary> 
+        </member>
+        <member name="M:GameOfLife.ViewModel.mouseMoveRight">
+            <summary>
+             Metoda klasy ViewModel obslugujaca przytrzymanie prawego klawisza myszy  
+            </summary> 
+        </member>
+        <member name="M:GameOfLife.ViewModel.resetGrid">
+            <summary>
+             Metoda klasy ViewModel resetujaca canvas  
+            </summary> 
+        </member>
+        <member name="T:GameOfLife.MainWindow">
+            <summary>
+            Logika interakcji dla klasy MainWindow.xaml
+            </summary>
+            <summary>
+            MainWindow
+            </summary>
+        </member>
+        <member name="M:GameOfLife.MainWindow.#ctor">
+            <summary>
+             Konstruktor klasy MainWindow    
+            </summary>      
+        </member>
+        <member name="M:GameOfLife.MainWindow.timer_Tick(System.Object,System.EventArgs)">
+            <summary>
+             Metoda klasy MainWindow jako calback metody obiekyu dispatcherTimer.Tick  
+            </summary>  
+        </member>
+        <member name="M:GameOfLife.MainWindow.Canvas_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+             Metoda klasy MainWindow odpowiedzialna za obsluge eventu klikniecia lewim klawiszem myszy. 
+            </summary> 
+        </member>
+        <member name="M:GameOfLife.MainWindow.OnMouseMove(System.Object,System.Windows.Input.MouseEventArgs)">
+            <summary>
+             Metoda klasy MainWindow odpowiedzialna za obsluge eventu ruchu myszy.  
+             Plus rozroznienie wcisnietego klawisza.
+            </summary>       
+        </member>
+        <member name="M:GameOfLife.MainWindow.Window_SizeChanged(System.Object,System.Windows.SizeChangedEventArgs)">
+            <summary>
+             Metoda klasy MainWindow odpowiedzialna korekte rozmiaru canvas.        
+            </summary>   
+        </member>
+        <member name="M:GameOfLife.MainWindow.Start_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+             Metoda klasy MainWindow odpowiedzialna za obsluge nacisniecia buttona (create/start/stop),
+             oraz walidacje inputow
+            </summary>  
+        </member>
+        <member name="M:GameOfLife.MainWindow.Reset_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+             Metoda klasy MainWindow odpowiedzialna za obsluge nacisniecia buttona (reset)        
+            </summary> 
+        </member>
+        <member name="M:GameOfLife.MainWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+             Metoda klasy MainWindow obslugujaca event window loaded.
+             Oraz dodanie backgound.
+            </summary> 
+        </member>
+        <member name="M:GameOfLife.MainWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:GameOfLifeX.Properties.Resources">
+            <summary>
+              Klasa zasobu wymagająca zdefiniowania typu do wyszukiwania zlokalizowanych ciągów itd.
+            </summary>
+        </member>
+        <member name="P:GameOfLifeX.Properties.Resources.ResourceManager">
+            <summary>
+            Zwraca buforowane wystąpienie ResourceManager używane przez tę klasę.
+            </summary>
+        </member>
+        <member name="P:GameOfLifeX.Properties.Resources.Culture">
+            <summary>
+              Przesłania właściwość CurrentUICulture bieżącego wątku dla wszystkich
+              przypadków przeszukiwania zasobów za pomocą tej klasy zasobów wymagającej zdefiniowania typu.
+            </summary>
+        </member>
+    </members>
+</doc>
